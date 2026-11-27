@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #f5ebdd;
+    color: #3b2a20;
+}
+
+nav {
+    padding: 20px;
+    background-color: #3b2a20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #f5ebdd;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul a {
+    color: #f5ebdd;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 12px;
+    border-radius: 0.5rem;
+}
+
+nav ul a:hover {
+    background-color: #d98e04;
+}
+
+.hero {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.hero img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.hero p {
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: #3b2a20;
+    padding: 15px 24px;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #d98e04;
+}
+
+#menu {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#menu > h2 {
+    text-align: center;
+    font-size: 34px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin-top: 10px;
+}
+
+.card p {
+    margin: 4px 0 8px;
+}
+.price {
+    font-size: 20px;
+    color: #d98e04;
+    font-weight: bolder;
+}
+
+#about {
+    padding: 40px 20px;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content img {
+    min-width: 0;
+    height: 300px;
+    object-fit: cover;
+    flex: 1;
+    border-radius: 12px;
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+footer {
+    padding: 20px 20px;
+    background-color: #3b2a20;
+    color: #f5ebdd;
+    line-height: 1.7;
+    text-align: center;
+}
+footer p {
+    font-size: 18px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+footer ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #f5ebdd;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #d98e04;
+}
+
+@media (max-width: 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-content img {
+        flex: none;
+        width: 100%;
+        height: 220px;
+    }
+    footer ul {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
